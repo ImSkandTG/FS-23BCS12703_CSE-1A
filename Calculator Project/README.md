@@ -5,7 +5,7 @@ This is basic beginner logic for a calculator which handles
 3. Division
 4. Multiplication
 5. Parenthesis
-This reads input from a file named "a.txt" and evaluates it by correct precedence which is _Brackets->Division/Multiplication->Addition/Subtraction_
+This reads input from a file named `a.txt` and evaluates it by correct precedence which is _Brackets->Division/Multiplication->Addition/Subtraction_
 ## Features
 - Reads input from `a.txt`
 - Supports nested parentheses
