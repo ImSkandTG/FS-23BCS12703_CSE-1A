@@ -1,8 +1,16 @@
 const fs = require("fs");
 function readProblem() {
     return new Promise(function(resolve) {
-        fs.readFile("a.txt","utf-8",(err,data) => {
+        fs.readFile("input.txt","utf-8",(err,data) => {
             resolve(data);
+        })
+    })
+}
+function WriteSolution(solution) {
+    return new Promise(function() {
+        fs.writeFile('output.txt',solution,'utf-8',(err)=> {
+            if (err) console.log("Error Found");
+            else console.log("Solution Updated!");
         })
     })
 }
@@ -53,7 +61,6 @@ parseString = (s,index) => {
 }
 async function main(){
     let eqn = (await readProblem()).trim();
-    console.log("Output: " + parseString(eqn,0));
+    return await WriteSolution(parseString(eqn, 0));
 }
-
 main();
